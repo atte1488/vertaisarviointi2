@@ -5,7 +5,7 @@ public class Login {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        // Kysytään kaikki inffo
+        // Kysytään kaikki tiedot
         System.out.print("Anna etunimi: ");
         String etunimi = input.nextLine().trim();
 
@@ -19,7 +19,7 @@ public class Login {
         if (etunimi.isEmpty() || sukunimi.isEmpty() || verkkotunnus.isEmpty()) {
             System.out.println("Virhe! Jokin tiedoista puuttuu.");
         } else {
-            // Kentät on täynnä, jatketaan
+            // Kentät on täynnä, jatketaan koodia
             generateEmail(etunimi, sukunimi, verkkotunnus);
        
             generateUsername(etunimi, sukunimi);
@@ -28,15 +28,15 @@ public class Login {
         input.close();
     }
 
-    // generateemail metodi hommat
+    // generateemail metodin tiedot
     public static void generateEmail(String etunimi, String sukunimi, String domain) {
         String email = (etunimi + "." + sukunimi + "@" + domain).toLowerCase();
         System.out.println("Sähköpostiosoite: " + email);
     }
 
-    // generateusername metodi hommat
+    // generateusername metodi 
     public static void generateUsername(String etunimi, String sukunimi) {
-        // käyttäjätunnus hommat
+        // käyttäjätunnus
         String etuOsa = etunimi.substring(0, 4);
         String sukuOsa = sukunimi.substring(sukunimi.length() - 4);
 
