@@ -9,7 +9,7 @@ public class Login {
         System.out.print("Anna etunimi: ");
         String etunimi = input.nextLine().trim();
 
-        System.out.print("Anna sukunimi: ");
+        System.out.print("Anna toinen nimesi: ");
         String sukunimi = input.nextLine().trim();
 
         System.out.print("Anna yrityksen verkkotunnus (esim. hamk.fi): ");
